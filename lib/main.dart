@@ -1,3 +1,4 @@
+import 'package:comicbookplus/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +10,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Row(
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
+                    const Text(
                       'Hey, minju',
                       style: TextStyle(
                         color: Colors.white,
@@ -42,41 +43,35 @@ class App extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 120,
             ),
             Text(
               'Total Balance',
               style: TextStyle(color: Colors.white.withOpacity(0.8)),
             ),
-            Text(
+            const Text(
               '\$5 194 482',
               style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 48,
                   color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(45)),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 40,
-                    ),
-                    child: Text(
-                      'Transfer',
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                    ),
-                  ),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Button(
+                  text: 'Tranfer',
+                  backGraoundColor: Color(0xFFF1B33B),
+                  textColor: Colors.black,
+                ),
+                Button(
+                  text: 'Request',
+                  backGraoundColor: Color(0xFF1F2123),
+                  textColor: Colors.white,
                 )
               ],
             )
